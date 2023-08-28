@@ -9,8 +9,7 @@ const assertEqual = function(actual, expected) {
 // function to return all but first element in the array //
 const tail = function(array) {
   return array.slice(1);
-  return array;
-}
+};
 
 // test to ensure original array is not modified with code //
 const words = ["Yo Yo", "Lighthouse", "Labs"];
