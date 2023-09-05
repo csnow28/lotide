@@ -1,4 +1,4 @@
-const eqArrays = function (array1, array2) {
+const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   }
@@ -16,10 +16,12 @@ if (eqArrays(actual, expected)) {
   console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
 } else if (actual !== expected) {
   console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
-};
+}
 
 //const words = ["Halloween", "Cats", "Bats", "Witches", "Pumpkins"];
-const words = ["purple", "blue", 5];
+//const words = ["purple", "blue", 5];
+//const words = ["tree", "acorn", "mushroom", ["grass"]];
+const words = "dragon ball z";
 const map = function(array, callback) {
   const results = [];
   for (let item of array) {
