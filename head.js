@@ -1,4 +1,6 @@
-// initial function to determine if the assertion will pass or fail //
+// the head function will take in an array, and will only return the first element in the array
+
+// assertEqual function to determine if the assertion will pass or fail
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
@@ -6,7 +8,7 @@ const assertEqual = function(actual, expected) {
     console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-// adding a function to return the first element in the array //
+// adding a function to return the first element in the array:
 const head = function(array) {
   return array[0];
 };
