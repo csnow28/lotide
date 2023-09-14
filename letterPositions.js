@@ -1,3 +1,24 @@
+/*const eqArrays = function(array1, array2) {
+  if (array1.length !== array2.length) {
+    return false;
+  }
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+if (eqArrays(actual, expected)) {
+  console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
+} else if (actual !== expected) {
+  console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
+} */
+
+// function that will return the index of letter positions in a string
+// in this case, the value 'sentence'.
+
 const letterPositions = function(sentence) {
   //create the results object that will log the individual letters and the array of the index position
   const results = {};
@@ -18,23 +39,5 @@ const letterPositions = function(sentence) {
 };
 
 console.log(letterPositions("Halloween"));
-
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-// added const for empty arrays in order to properly compare and utilize eqArrays messaging //
-const actual = [];
-const expected = [];
-if (eqArrays(actual, expected)) {
-  console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
-} else if (actual !== expected) {
-  console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
-}
+console.log(letterPositions("poetry for neanderthals"));
+console.log(letterPositions("Momo is a cool cat"));
