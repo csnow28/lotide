@@ -1,4 +1,4 @@
-const eqArrays = function (array1, array2) {
+const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   }
@@ -9,16 +9,13 @@ const eqArrays = function (array1, array2) {
   }
   return true;
 };
-// added const for empty arrays in order to properly compare and utilize eqArrays messaging //
-const actual = [];
-const expected = [];
 if (eqArrays(actual, expected)) {
   console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
 } else if (actual !== expected) {
   console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
-};
+}
 
-//function to return a "slice of the array with elements taken from the beginning.
+//function to return a "slice of the array with elements taken from the beginning and
 //keep going until the callback reeturns a truthy value."
 const takeUntil = function(array, callback) {
   //create the array we will push the items to, from the callback
@@ -35,8 +32,8 @@ const takeUntil = function(array, callback) {
   }
   return results;
 };
-  const data = ["Halloween", "is", "super", "cool", "and", "scary"];
-  const results = takeUntil(data, data => data === 'and');
+const data = ["Halloween", "is", "super", "cool", "and", "scary"];
+const results = takeUntil(data, data => data === 'and');
 console.log(results);
 //results should return "Halloween" "is" "super" "cool"
 
