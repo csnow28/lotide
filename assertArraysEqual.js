@@ -1,4 +1,8 @@
-const eqArrays = function (array1, array2) {
+// adding in a new function that will compare two arrays, and using the eqArrays functions, will return
+// either a pass or fail as a check.
+// using the eqArrays function to verify if arrays are equal in addition to comparing
+
+const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   }
@@ -9,11 +13,16 @@ const eqArrays = function (array1, array2) {
   }
   return true;
 };
-// added const for empty arrays in order to properly compare and utilize eqArrays messaging //
-const actual = [];
-const expected = [];
-if (eqArrays(actual, expected)) {
-  console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
-} else if (actual !== expected) {
-  console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
+// removed unneccessary empty arrays, they weren't needed to properly execute the function
+const assertEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
+    console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
+  } else if (actual !== expected) {
+    console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
+  }
 };
+
+// added some quick test cases
+assertEqual([5, 6, 7, 8], [5, 6, 7, 8]);
+assertEqual([0, 9, 8], [8, 9, 0]);
+assertEqual(["taco", "cat"], ["burrito", "cat"]);
