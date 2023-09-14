@@ -9,25 +9,31 @@ const eqArrays = function(array1, array2) {
   }
   return true;
 };
-// added const for empty arrays in order to properly compare and utilize eqArrays messaging //
-const actual = [];
-const expected = [];
 if (eqArrays(actual, expected)) {
   console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
 } else if (actual !== expected) {
   console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
 }
 
-//const words = ["Halloween", "Cats", "Bats", "Witches", "Pumpkins"];
-//const words = ["purple", "blue", 5];
-//const words = ["tree", "acorn", "mushroom", ["grass"]];
-const words = "dragon ball z";
+let words = ["Halloween", "Cats", "Bats", "Witches", "Pumpkins"];
+//let words = ["purple", "blue", 5];
+//let words = ["tree", "acorn", "mushroom", ["grass"]];
+//let words = "dragon ball z";
+
+// add a function that takes an array, and then uses a callback to return a
+// new array based on the results of said callback to each item in the array
+// in this example, the index of 0, so the first letter of each element
+
 const map = function(array, callback) {
+  // create an empty array for the callback
   const results = [];
+  // loop over the items in the array
   for (let item of array) {
+    // push the item in the array into the empty, new array
     results.push(callback(item));
   }
   return results;
 };
 const results1 = map(words, word => word[0]);
 console.log(results1);
+
