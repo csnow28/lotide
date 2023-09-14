@@ -5,19 +5,25 @@ const assertEqual = function(actual, expected) {
     console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-// declare the function that will be used to report back how many instances of each string are in allItems array//
-const countOnly = function(allItems, itemsToCount) {
-  const results = {};
+// declare the function that will be used to report back how many instances of each string
+// are in the allItems array
 
+const countOnly = function(allItems, itemsToCount) {
+  // create an empty object
+  const results = {};
+  // loop through the elements
   for (const item of allItems) {
     console.log(item);
+    // if the item (in this case, name) is present in the itemsToCount value, add it to new object
     if (itemsToCount[item]) {
-    if (results[item]) {
-      results[item] += 1;
-    } else {
-      results[item] = 1;
+      if (results[item]) {
+      // increment based on how many times that name appears in the loop of the object
+        results[item] += 1;
+      } else {
+      // or, add one if the name appears once
+        results[item] = 1;
+      }
     }
-  } 
   }
   return results;
 };
