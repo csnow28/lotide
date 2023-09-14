@@ -6,8 +6,10 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+// function that will take in a sentence, and then returns a count of each
+// letter in the sentence - while also removing, so not counting spaces
 // declare the function that takes in a string
-const countLetters = function (addedStr) {
+const countLetters = function(addedStr) {
   // add in the empty object that will return the letters and count
   const individualLetterCount = {};
   // time to loop through the string
