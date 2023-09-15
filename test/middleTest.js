@@ -1,4 +1,5 @@
 const middle = require("../middle")
+const assertArraysEqual = require("../assertArraysEqual")
 
 // adding test cases for middle function
 
