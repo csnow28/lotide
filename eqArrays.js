@@ -1,14 +1,5 @@
 // eqArrays is a function that will take in two arrays and checks if they are equal
 // if the arrays are equal, will return true, else will return false if not equal
-// same emoji use for quick visual assertion
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
 
 const eqArrays = function(array1, array2) {
   // check if the length of the 2 arrays are not equal, and if so, return false.
@@ -24,7 +15,4 @@ const eqArrays = function(array1, array2) {
   // return true if the array elements match!
   return true;
 };
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true);
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
+module.exports = eqArrays
