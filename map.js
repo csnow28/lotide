@@ -9,10 +9,10 @@ const eqArrays = function(array1, array2) {
   }
   return true;
 };
-if (eqArrays(actual, expected)) {
-  console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
-} else if (actual !== expected) {
-  console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
+if (eqArrays(array1, array2)) {
+  console.log(`🟢 Assertion Passed: ${array1} === ${array2}`);
+} else if (array1 !== array2) {
+  console.log(`🔴 Assertion Failed: ${array1} !== ${array2}`);
 }
 
 let words = ["Halloween", "Cats", "Bats", "Witches", "Pumpkins"];
