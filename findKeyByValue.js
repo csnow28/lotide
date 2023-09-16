@@ -19,6 +19,7 @@ const findKeyByValue = function(object, value) {
       return key;
     }
   }
+  return undefined;
 };
 
 /* checked spoilers, I did a for... in first
