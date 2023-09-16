@@ -1,20 +1,3 @@
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-if (eqArrays(actual, expected)) {
-  console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
-} else if (actual !== expected) {
-  console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
-}
-
 //function to return a "slice of the array with elements taken from the beginning and
 //keep going until the callback reeturns a truthy value."
 const takeUntil = function(array, callback) {
@@ -32,17 +15,5 @@ const takeUntil = function(array, callback) {
   }
   return results;
 };
-const data = ["Halloween", "is", "super", "cool", "and", "scary"];
-const results = takeUntil(data, data => data === 'and');
-console.log(results);
-//results should return "Halloween" "is" "super" "cool"
 
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const results2 = takeUntil(data2, x => x === ',');
-console.log(results2);
-
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, x => x < 0);
-console.log(results1);
-
-console.log('---');
+module.exports = takeUntil
