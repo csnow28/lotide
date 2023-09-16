@@ -1,12 +1,5 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-// declare the function that will be used to report back how many instances of each string
-// are in the allItems array
+// a function that will take in a collection of items and will return counts for a specific subset
+// example being, count how many times a name appears
 
 const countOnly = function(allItems, itemsToCount) {
   // create an empty object
@@ -27,21 +20,5 @@ const countOnly = function(allItems, itemsToCount) {
   }
   return results;
 };
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
 
-const result1 = countOnly(firstNames, {"Jason": true, "Karima": true, "Fang": true, "Agouhanna": false});
-
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
+module.exports = countOnly
