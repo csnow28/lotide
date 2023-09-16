@@ -1,23 +1,3 @@
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 // function that will take an elements in an array and will return only the elements from the source array
 // that are not in the itemsToRemove array.
 // The function values are source, and itemsToRemove
@@ -43,11 +23,4 @@ const without = function(source, itemsToRemove) {
   return results;
 };
 
-console.log(without([1, 2, 3], [1]));
-console.log(without(["1", "2", "3"], [1, 2, "3"]));
-console.log(without(["taco", "cat", "is", "boo", "cool"], ["boo"]));
-
-//const words = ["hello", "world", "lighthouse"];
-//without(words, ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-//assertEqual(eqArrays(words, ["hello", "world", "lighthouse"]));
+module.exports = without
