@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 // function that will take in a sentence, and then returns a count of each
 // letter in the sentence - while also removing, so not counting spaces
 // declare the function that takes in a string
@@ -24,8 +16,4 @@ const countLetters = function(addedStr) {
   return individualLetterCount;
 };
 
-
-console.log(countLetters("lighthouse in the house"));
-console.log(countLetters("Halloween is awesome"));
-console.log(countLetters("Pumpkins are brilliant  "));
-console.log(countLetters("  "));
+module.exports = countLetters
