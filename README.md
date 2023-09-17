@@ -37,7 +37,7 @@ The following functions are currently implemented:
 * `eqArrays(...)`: A function to check if two arrays are equal, and prints an appropriate message.
 * `eqObjects(...)`: A function to compare two objects for equality and prints an appropriate message.
 * `findKey(...)`: A function that takes an object and callback, returning the first truthy key.
-* `indKeyByValue(...)`: A function that will find the first key containing a specific value in an object.
+* `findKeyByValue(...)`: A function that will find the first key containing a specific value in an object.
 * `flatten(...)`: A function that takes in an array with a nested element, and returns one array.
 * `letterPositions(...)`: A function that will return all letter index from a string that is given.
 * `map(...)`: A function that takes two arguments and will return a new array from the callback results.
