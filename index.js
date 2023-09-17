@@ -29,7 +29,7 @@ module.exports = {
   eqArrays,
   eqObjects,
   findKey,
-  indKeyByValue,
+  findKeyByValue,
   flatten,
   letterPositions,
   map,
