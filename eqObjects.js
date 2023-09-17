@@ -1,4 +1,4 @@
-const eqArrays = require("../eqArrays");
+const eqArrays = require("./eqArrays");
 
 // function that will compare two objects and will return true if they are equal
 // and will return false if not.
