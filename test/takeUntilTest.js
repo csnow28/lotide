@@ -1,3 +1,4 @@
+const { assert } = require("chai");
 const assertArraysEqual = require("../assertArraysEqual")
 const takeUntil = require("../takeUntil")
 
@@ -5,15 +6,17 @@ const takeUntil = require("../takeUntil")
 
 const data = ["Halloween", "is", "super", "cool", "and", "scary"];
 const results = takeUntil(data, data => data === 'and');
-console.log(results);
+assertArraysEqual(results);
 //results should return "Halloween" "is" "super" "cool"
 
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 const results2 = takeUntil(data2, x => x === ',');
-console.log(results2);
+assertArraysEqual(results2, ["I've", "been", "to", "Hollywood"])
+assertArraysEqual(results2, ["I've", "been", "to", "Redwood"])
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);
-console.log(results1);
+assertArraysEqual(results1, [1, 2, 5, 7, 2])
+assertArraysEqual(results1, [1, 2, 5, 7, -1])
 
-console.log('---');
+//console.log('---');
